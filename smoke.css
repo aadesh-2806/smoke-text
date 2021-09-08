@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+section,div{
+    background: #111;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+h3{
+    color: #fff;
+    font-size: 3.5em;
+    letter-spacing: 2px;
+}
+.text{
+    position: relative;
+    text-align: justify;
+    margin: 40px;
+    color: #fff;
+    max-width: 800px;
+    user-select: none;
+    font-size: 1.5em;
+}
+span{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+
+}
+.active{
+    animation: smoke 3s linear forwards;
+    transform-origin: bottom;
+}
+@keyframes smoke {
+    0%{
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0) translateY(0) rotate(0deg) scale(1);
+    }
+    50%{
+        opacity: 1;
+        pointer-events: none;
+    }
+    100%{
+        opacity: 0;
+        filter: blur(20px);
+        transform: translateX(300px) translateY(-300px) rotate(720deg) scale(4);
+    }
+}
+h3 .active{
+    animation: smokes 4s linear forwards;
+    transform-origin: bottom;
+}
+@keyframes smokes {
+    0%{
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0) translateY(0) rotate(0deg) scale(1);
+    }
+    50%{
+        opacity: 1;
+        pointer-events: none;
+    }
+    100%{
+        opacity: 0;
+        filter: blur(15px);
+        transform: translateX(600px) translateY(-700px) rotate(360deg) scale(8);
+    }
+}
